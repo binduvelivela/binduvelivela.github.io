@@ -1,41 +1,63 @@
-h1{
-    color:#2d3d56;
-    text-align: center;
+h1 {
+  color: #2d3d56;
+  text-align: center;
 }
 
-
-p
-{
-    color: black;
+p {
+  color: black;
 }
 
-html
-{
-    font-family: Arial, sans-serif;
+html {
+  font-family: Arial, sans-serif;
 }
 
-#profilePic
-{
-    width: 100%;
-    border-radius: 5px 5px 0px 0px;
+#profilePic {
+  width: 400px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px 10px 10px 10px;
 }
 
-.card
-{
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 200px;
-    border-radius: 0px 0px 5px 5px;
+.card {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 0px 0px 5px 5px;
+  max-width: 100%;
+  margin: 50px;
 }
 
-.card:hover
-{
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    cursor: pointer;
+.card:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.container
-{
-    padding: 2px 16px;
+.container {
+  padding: 2px 16px;
+}
+
+#logo {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 40px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  font-family: "Sansita Swashed", cursive;
+}
+
+#logo:hover {
+  color: #ffc107;
+  font-size: 40px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 700;
+  font-family: "Sansita Swashed", cursive;
+}
+
+#footer {
+  background-color: black;
+  color: white;
+}
+
+#Contact_me_image {
+  align-self: center;
+  margin: 10px 10px 10px 10px;
+  max-height: 100%;
 }
