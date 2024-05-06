@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* ... existing styles ... */
+    </style>
+</head>
+<body>
+    <h1>Contact Me</h1>
+    <form id="contact-form" onsubmit="sendEmail(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Email</button>
+    </form>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Create a FormData object to send the data via AJAX
+            var formData = new FormData();
+            formData.append("name", name);
+            formData.append("email", email);
+            formData.append("message", message);
+
+            // Send the AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "send_email.php", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    alert(xhr.responseText); // Display the response from the server
+                    document.getElementById("contact-form").reset(); // Reset the form
+                }
+            };
+            xhr.send(formData);
+        }
+    </script>
+</body>
+</html>
